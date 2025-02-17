@@ -112,6 +112,29 @@ class linkedList(object):
             last = last.nextNode
             
         last.nextNode = new_node
+        
+    def deleteNode(self, key):
+        if key is None:
+            print('boyle bir node yoktur')
+            return
+        
+        temp = self.head
+        
+        if temp is not None:
+            if temp == key:
+                self.head = temp.nextNode
+                temp = None
+                return
+        #node u silmek icin key parametresini ara
+        while temp is not None:
+            if temp.value == key:
+                break
+            prev = temp
+            temp = temp.nextNode
+        
+        #nodu sil
+        prev.nextNode = temp.nextNode
+        temp = None
             
     def printLinkedList(self):
         temp = self.head
@@ -125,11 +148,10 @@ linked_list.push(25)
 linked_list.push(15)
 linked_list.push(5)
 linked_list.push('ilk eleman')
-
-#linked_list.printLinkedList()
-
 linked_list.insertAfter(linked_list.head.nextNode, 35)
 linked_list.insertAfter(linked_list.head, 45)
 linked_list.insertLastItem('sonnn')
 linked_list.append('sonnn2')
+linked_list.printLinkedList()
+linked_list.deleteNode(45)
 linked_list.printLinkedList()
