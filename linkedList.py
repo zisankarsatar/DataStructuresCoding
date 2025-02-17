@@ -64,9 +64,15 @@ print(germany.getPrevNode().getPrevNode().getNodeValue())
 class linkedList(object):
     def __init__(self):
         self.head = None
-        
+        self.tail = None
+                
     def push(self, new_data):
         new_node = Node(new_data)
+        
+        if self.head == None:
+            print('tail atandi')
+            self.tail = new_node
+            print(self.tail.value)
         
         new_node.nextNode = self.head
         
@@ -88,6 +94,25 @@ class linkedList(object):
         #prev node nextin new node yap
         prev_node.nextNode = new_node
         
+    def insertLastItem(self, new_data):
+        new_node = Node(new_data)
+        self.tail.nextNode = new_node
+        self.tail = new_node        
+       
+    #hocanin cozumu
+    def append(self, new_data):
+        new_node = Node(new_data)
+        
+        if self.head is None:
+            self.head = new_node
+            return
+
+        last = self.head
+        while last.nextNode:
+            last = last.nextNode
+            
+        last.nextNode = new_node
+            
     def printLinkedList(self):
         temp = self.head
         while temp:
@@ -101,9 +126,10 @@ linked_list.push(15)
 linked_list.push(5)
 linked_list.push('ilk eleman')
 
-linked_list.printLinkedList()
+#linked_list.printLinkedList()
 
 linked_list.insertAfter(linked_list.head.nextNode, 35)
 linked_list.insertAfter(linked_list.head, 45)
-
+linked_list.insertLastItem('sonnn')
+linked_list.append('sonnn2')
 linked_list.printLinkedList()
