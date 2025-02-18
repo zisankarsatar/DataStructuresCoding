@@ -35,7 +35,7 @@ def stringReverse(word):
 print(stringReverse('zisan'))
 
 def multiply(x,y):
-    #ussu
+    #carpma
     
     #base_case
     if y == 1:
@@ -45,3 +45,13 @@ def multiply(x,y):
     return multiply(x,y-1) + x
 
 print(multiply(3,3))
+
+def power(a,b):
+    #ussu
+    
+    if b == 0:
+        return 1
+    
+    return multiply(a, power(a, b-1))
+
+print(power(3,3))
