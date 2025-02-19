@@ -55,3 +55,4 @@ def power(a,b):
     return multiply(a, power(a, b-1))
 
 print(power(3,3))
+print(power(5,3))
