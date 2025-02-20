@@ -54,5 +54,33 @@ def binarySearch(list, key):
     return found
 
 
-print(binarySearch([2,6,8,78,84,543,643], 543))
+#print(binarySearch([2,6,8,78,84,543,643], 543))
     
+    
+import math
+
+def jumpSearch(list, key):
+    n = len(list)
+    step = math.sqrt(n)
+    
+    prev = 0
+    
+    while list[int(min(step, n)-1)] < key:
+        prev = step
+        step += math.sqrt(n)
+        
+        if prev >= n:
+            return -1
+    
+    while list[int(prev)] < key:
+        prev += 1
+        
+        if prev == min(step, n):
+            return -1
+        
+    if list[int(prev)] == key:
+        return int(prev)
+    
+    return -1
+
+print(jumpSearch([2,6,8,78,84,543,643], 78))
