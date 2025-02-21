@@ -83,4 +83,31 @@ def jumpSearch(list, key):
     
     return -1
 
-print(jumpSearch([2,6,8,78,84,543,643], 78))
+#print(jumpSearch([2,6,8,78,84,543,643], 78))
+
+def rec_binary_search(list, key):
+    #binary search with recursive
+    
+    #base case
+    if len(list) == 0:
+        return False
+    
+    #recursive case
+    else:
+        mid = int(len(list)/2)
+        
+        #if match found (base)
+        if list[mid] == key:
+            return True
+        else:
+            # lower
+            if key < list[mid]:
+                return rec_binary_search(list[:mid], key)
+            # upper
+            else:
+                return rec_binary_search(list[mid+1:], key)
+            
+    return False
+
+#have to fix            
+print(rec_binary_search([2,6,8,78,84,543,643], 6545))
