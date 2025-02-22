@@ -44,5 +44,22 @@ def merge_sorting(arr):
         
     return arr
 
-print(merge_sorting([12,7,8,6,1]))
+#print(merge_sorting([12,7,8,6,1]))
+
+def insert_sorting(arr):
+    
+    for i in range(1, len(arr)):
+        
+        current_value = arr[i]
+        position = i
+        
+        #sublist
+        while position > 0 and arr[position-1] > current_value:
+            arr[position] = arr[position-1]
+            position -= 1
+        arr[position] = current_value
+    
+    return arr
+
+print(insert_sorting([12,7,8,6,1]))
                
