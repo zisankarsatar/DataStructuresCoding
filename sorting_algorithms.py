@@ -92,4 +92,21 @@ def selection_sorting_by_incrase(arr):
             arr[positionOfMax] = temp
     return arr
 
-print(selection_sorting_by_incrase([12,7,8,6,1]))
+#print(selection_sorting_by_incrase([12,7,8,6,1]))
+
+
+def counting_sorting(arr, maxval):
+    m = maxval + 1
+    count = [0] * m
+    
+    for a in arr:
+        count[a] += 1
+    i=0
+    for a in range(m):
+        for c in range(count[a]):
+            arr[i] = a
+            i += 1
+    
+    return arr
+
+print(counting_sorting([1,1,1,2,2,3,4,2,5,6,3,4,6,3,3,7,1], 7))
