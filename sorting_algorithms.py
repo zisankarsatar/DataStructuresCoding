@@ -61,5 +61,35 @@ def insert_sorting(arr):
     
     return arr
 
-print(insert_sorting([12,7,8,6,1]))
+#print(insert_sorting([12,7,8,6,1]))
                
+def selection_sorting(arr):
+    for i in range(len(arr)-1, 0, -1):
+        positionOfMax = 0
+        
+        for location in range(1, i+1):
+            if arr[location] > arr[positionOfMax]:
+                positionOfMax = location
+            
+            temp = arr[i]
+            arr[i] = arr[positionOfMax]
+            arr[positionOfMax] = temp
+            
+    
+    return arr
+
+#print(selection_sorting([12,7,8,6,1]))
+
+def selection_sorting_by_incrase(arr):
+    for i in range(len(arr)):
+        positionOfMax = 0
+        
+        for location in range(1, i+1):
+            if arr[location] > arr[positionOfMax]:
+                positionOfMax = location
+            temp = arr[i]
+            arr[i] = arr[positionOfMax]
+            arr[positionOfMax] = temp
+    return arr
+
+print(selection_sorting_by_incrase([12,7,8,6,1]))
