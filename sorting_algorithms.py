@@ -154,5 +154,5 @@ def partition(arr, first, last):
     
     return right
 
-arr = [3,2,13,4]
+arr = [3,2,13,4,323]
 print(quick_sort(arr))
