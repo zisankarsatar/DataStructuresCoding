@@ -46,4 +46,21 @@ insert(r, Node(89))
 insert(r, Node(67))
 insert(r, Node(11))
 
-inorder(r)
+#inorder(r)
+
+
+def search(root, key):
+    if root is not None:
+        if root.value == key:
+            return print('bulundu')
+        elif root.value is not None:
+            if root.value < key:
+                print('sagda')
+                search(root.right, key)
+            else:
+                print('solda')
+                search(root.left, key)
+    else:
+        print('bulunamadi')    
+
+search(r, 89)
