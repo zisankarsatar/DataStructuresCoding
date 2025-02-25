@@ -167,5 +167,21 @@ def second_great_low(arr):
     else:
         return str(sorted_list[1]) + ' ' + str(sorted_list[-2])
     
-print(second_great_low([23,3,1,6,75,99,34]))
+#print(second_great_low([23,3,1,6,75,99,34]))
+
+import itertools
+
+def three_sum(arr, target_value):
     
+    comb = []
+    for x in itertools.combinations(arr, 3):
+        s = 0 
+        for l in x:
+            s += l
+        #print(str(x) + '+' + str(s)) 
+        if s == target_value:
+            comb.append(x)        
+    
+    return comb
+
+print(three_sum([2,3,4,6,7,-1,8], 13))
