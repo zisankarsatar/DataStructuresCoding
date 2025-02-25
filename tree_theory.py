@@ -13,7 +13,7 @@ root.right = Node('C')
 #print(root.value)
 #print(root.right.value)
 
-def insert(root, new_node):
+def insert(root, new_node):  #binary search tree
     if root is None:
         root = new_node
     else:
