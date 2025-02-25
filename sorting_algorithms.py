@@ -155,4 +155,17 @@ def partition(arr, first, last):
     return right
 
 arr = [3,2,13,4,323]
-print(quick_sort(arr))
+#print(quick_sort(arr))
+
+def second_great_low(arr):
+    
+    sorted_list = insert_sorting(arr)  #you can use  sorted() function from python, it sorts by asc
+    print(sorted_list)
+    
+    if len(sorted_list) < 2:
+        return str(sorted_list[0]) + ' ' + str(sorted_list[0])
+    else:
+        return str(sorted_list[1]) + ' ' + str(sorted_list[-2])
+    
+print(second_great_low([23,3,1,6,75,99,34]))
+    
