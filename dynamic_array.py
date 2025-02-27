@@ -49,20 +49,14 @@ new_array1.append(6)
 
 print(new_array1.capacity)
 
-
 def wordSplit(liste):
     #listeyi ikiye bol
     # ilk dizin ini harflere bol
     # ikinci elemanin kendisini zaten liste
     # ilk dizenin geri kalan elemanlarini ikinci dize icinde ara
     
-    
     word = list((liste[0]))
     word_pool = liste[1].split(',')
-    
-    
-    #print(word);
-    #print(word_pool)
     
     k=0
     aranacak_karakterler=''
