@@ -99,8 +99,7 @@ class DoubleLinked:
             
     def get_forward(self, position: int):
         return self.__get_item(position)
-        
-    
+           
     def get_reverse(self, position: int):
         #print("get reverse worked  for {}".format(position))
         return self.__get_item(position, isForward=False)
@@ -127,7 +126,6 @@ class Node:
         self.value: any = val
         self.next: Node = None
 
-
 z = DoubleLinked()
 z.append(1)
 z.append(2)
@@ -145,5 +143,4 @@ z.insert(-77,8)
 
 z.delete(3)
 print(z)
-
 print(z.search(7))
