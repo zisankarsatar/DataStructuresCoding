@@ -136,8 +136,8 @@ z.append(6)
 z.append(7)
 z.insert(-77,8)
 
-#  [8, 1, 2, 3]
-# print(z.get(1))
+
+print(z.get(1))
 # print(z.get(3))
 # print(z.get_reverse(1))
 
