@@ -50,9 +50,10 @@ class Graph:
     
     def __iter__(self):
         return iter(self.vertList.values())
+    
+    
 #addVertex(vert) -> graph icerisine node(vertex) ekler
 #addEdge(fromVert, toVert) -> iki node birbinine baglayan directed edge ekler 
 #addEdge(fromVert, toVert, weight) -> iki node birbinine baglayan weighted and directed edge ekler 
 #getVertex(vertexKey) -> graph icerisinde node bulur
 #getVertices() -> node lari return eder 
-
