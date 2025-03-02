@@ -14,8 +14,6 @@ class DoubleLinked:
         
     # def __iter__(self):
         
-    
-        
     def append(self, val: any):
         n = Node(val)
         if self.count == 0:
@@ -139,11 +137,11 @@ class Node:
         self.next: Node = None
 
 
-z = DoubleLinked()
-print(len(z))
-print(z)
-z + 'asd'
-print(z)
+# z = DoubleLinked()
+# print(len(z))
+# print(z)
+# z + 'asd'
+# print(z)
 
 # for a in z:
 #     print(a)
