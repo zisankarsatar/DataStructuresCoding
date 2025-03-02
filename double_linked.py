@@ -4,6 +4,18 @@ class DoubleLinked:
         self.head: Node = None
         self.tail: Node = None
         
+    def __len__(self) -> int:
+        return self.count
+    
+    
+    def __add__(self, val: any) -> None:
+        self.append(val)
+        
+        
+    # def __iter__(self):
+        
+    
+        
     def append(self, val: any):
         n = Node(val)
         if self.count == 0:
@@ -126,21 +138,29 @@ class Node:
         self.value: any = val
         self.next: Node = None
 
+
 z = DoubleLinked()
-z.append(1)
-z.append(2)
-z.append(3)
-z.append(4)
-z.append(5)
-z.append(6)
-z.append(7)
-z.insert(-77,8)
-
-
-print(z.get(1))
-# print(z.get(3))
-# print(z.get_reverse(1))
-
-z.delete(3)
+print(len(z))
 print(z)
-print(z.search(7))
+z + 'asd'
+print(z)
+
+# for a in z:
+#     print(a)
+# z.append(1)
+# z.append(2)
+# z.append(3)
+# z.append(4)
+# z.append(5)
+# z.append(6)
+# z.append(7)
+# z.insert(-77,8)
+
+
+# print(z.get(1))
+# # print(z.get(3))
+# # print(z.get_reverse(1))
+
+# z.delete(3)
+# print(z)
+# print(z.search(7))
