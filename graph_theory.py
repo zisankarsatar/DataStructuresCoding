@@ -57,3 +57,6 @@ class Graph:
 #addEdge(fromVert, toVert, weight) -> iki node birbinine baglayan weighted and directed edge ekler 
 #getVertex(vertexKey) -> graph icerisinde node bulur
 #getVertices() -> node lari return eder 
+
+
+
