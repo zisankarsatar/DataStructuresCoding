@@ -58,5 +58,10 @@ class Graph:
 #getVertex(vertexKey) -> graph icerisinde node bulur
 #getVertices() -> node lari return eder 
 
+nv = Vertex(2)
+nv3 = Vertex(3)
+nv4 = Vertex(4)
+nv5 = Vertex(5)
+
 
 
