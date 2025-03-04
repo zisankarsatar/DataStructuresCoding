@@ -58,10 +58,26 @@ class Graph:
 #getVertex(vertexKey) -> graph icerisinde node bulur
 #getVertices() -> node lari return eder 
 
-nv = Vertex(2)
-nv3 = Vertex(3)
-nv4 = Vertex(4)
-nv5 = Vertex(5)
+g = Graph()
+
+g.addVertex(1)
+g.addVertex(2)
+g.addVertex(3)
+g.addVertex(4)
+g.addVertex(5)
+g.addVertex(6)
+g.addVertex(7)
+
+g.addEdge(1,2)
+g.addEdge(1,4)
+g.addEdge(1,3)
+g.addEdge(2,5)
+g.addEdge(5,7)
+g.addEdge(3,6)
+g.addEdge(2,4)
 
 
-
+for v in g:
+    print(v)
+    
+print(g.getVertex(1))
