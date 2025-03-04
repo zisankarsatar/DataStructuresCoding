@@ -77,7 +77,31 @@ g.addEdge(3,6)
 g.addEdge(2,4)
 
 
-for v in g:
-    print(v)
+# for v in g:
+#     print(v)
     
-print(g.getVertex(1))
+# print(g.getVertex(1))
+
+
+graph = { "A" : set(["B", "C"]),
+        "B" : set(["A","D","E"]),
+        "C" : set(["A","F"]),
+        "D" : set(["B"]),
+        "E" : set(["B", "F"]),
+        "F" : set(["C", "E"]),
+        }
+
+print(graph)
+
+def dfs(graph, start):
+    visited = set()
+    stack = [start]
+    while stack:
+        vertex = stack.pop()
+        if vertex not in visited:
+            visited.add(vertex)
+            stack.extend(graph[vertex]-visited)
+        print(visited)
+    return visited
+
+dfs(graph, "A")
