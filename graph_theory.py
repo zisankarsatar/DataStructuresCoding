@@ -118,4 +118,29 @@ def bfs(graph, start):
         print(visited)
     return visited
 
-bfs(graph, "A")
+#bfs(graph, "A")
+
+def vertexCoverting(a):
+    vertices = a[2][1:-1].split(',')
+    graph = a[1][1:-1].split(',')
+    failed = []
+    
+    if len(vertices[0]) == 0:
+        return a[1]
+
+    for i in graph:
+        flag = True
+        for x in vertices:
+            if x in i:
+                flag = False
+        if flag:
+            failed.append(i)   
+    if len(failed) > 0:
+        return "(" + ",".join(failed) + ")"
+    return "yes" 
+
+#result = vertexCoverting(["(A,B,C,D)","(A-B,A-D,B-D,A-C)", "(A,B)"])
+#result2 = vertexCoverting(["(A,B,C,D)","(A-B,A-D,B-D,A-C)", "(C)"])
+result3 = vertexCoverting(["(A,B,C,D)","(A-B,A-D,B-D,A-C)", "(C,B)"])
+
+print(result3)
