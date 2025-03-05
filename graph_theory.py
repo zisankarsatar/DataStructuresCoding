@@ -91,8 +91,8 @@ graph = { "A" : set(["B", "C"]),
         "F" : set(["C", "E"]),
         }
 
-print(graph)
-
+#print(graph)
+#Deepth First Search
 def dfs(graph, start):
     visited = set()
     stack = [start]
@@ -104,4 +104,18 @@ def dfs(graph, start):
         print(visited)
     return visited
 
-dfs(graph, "A")
+#print(dfs(graph, "A"))
+
+#Breadth First Search 
+def bfs(graph, start):
+    visited = set()
+    queue = [start]
+    while queue:
+        vertex = queue.pop()
+        if vertex not in visited:
+            visited.add(vertex)
+            queue.extend(graph[vertex]-visited)
+        print(visited)
+    return visited
+
+bfs(graph, "A")
