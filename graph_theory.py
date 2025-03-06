@@ -141,6 +141,6 @@ def vertexCoverting(a):
 
 #result = vertexCoverting(["(A,B,C,D)","(A-B,A-D,B-D,A-C)", "(A,B)"])
 #result2 = vertexCoverting(["(A,B,C,D)","(A-B,A-D,B-D,A-C)", "(C)"])
-result3 = vertexCoverting(["(A,B,C,D)","(A-B,A-D,B-D,A-C)", "(C,B)"])
-
-print(result3)
+#result3 = vertexCoverting(["(A,B,C,D)","(A-B,A-D,B-D,A-C)", "(C,B)"])
+result4 = vertexCoverting(["(A,B,C,D)","(A-B,A-D,B-D,A-C)", "(A)"])
+print(result4)
