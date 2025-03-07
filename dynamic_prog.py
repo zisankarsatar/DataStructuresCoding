@@ -17,6 +17,9 @@ def recur_fibo(n):
 # ....
 
 def dynamic_fibo(n):
+    """
+    dynamic programing ile fibonachi cozumu
+    """
     fibo_list = [0,1]
     
     while len(fibo_list) < n+1:
@@ -35,5 +38,48 @@ def dynamic_fibo(n):
     
     return fibo_list[n]
     
-print(dynamic_fibo(3))
+#print(dynamic_fibo(3))
     
+#recursive
+def recursive_catalan(n):
+    """
+    recusrive solution for catalan numbers
+    """
+    #base case
+    if n <= 1:
+        return 1
+    
+    res = 0 
+    
+    for i in range(n):
+        res += recursive_catalan(i) * recursive_catalan(n-i-1)
+        
+    return res
+
+#for i in range(10):
+#    print(recursive_catalan(i))
+    
+def dynamic_calatan(n):
+    """
+    dynamic progpraming solution to catalan problem
+    """
+    #base case
+    if n <= 1:
+        return 1
+    
+    #depola
+    catalan = [0 for i in range(n+1)]
+    
+    # ilk iki degeri doldur
+    catalan[0], catalan[1] = 1,1
+    
+    #listeyi doldur
+    for i in range(2, n+1):
+        catalan[i] = 0
+        for j in range(i):
+            catalan[i] = catalan[i] + catalan[j]*catalan[i-j-1]
+            
+    return catalan[n]
+    
+for i in range(5):
+    print(dynamic_calatan(i))
