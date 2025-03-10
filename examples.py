@@ -6,9 +6,7 @@ def siklikbulma(string):
     final_string = ""
 
     while i < len(string):
-
         c = string[i]
-
         j = i+1
 
         compressed = [1,c]
