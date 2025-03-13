@@ -11,7 +11,7 @@ def duplicates(arr):
     for i in range(0, len(arr)):
         #mutlak aliniyor
         if abs(arr[i]) == len(arr):
-            el = -1
+            return 'hatali liste'            
         else:
             el = arr[abs(arr[i])]
             
@@ -22,7 +22,7 @@ def duplicates(arr):
             arr[abs(arr[i])] = -len(arr)
         else:
             if abs(arr[i]) == len(arr):
-                dups.append(0)
+                return 'hatali liste'
             else:
                 dups.append(abs(arr[i]))
                 
@@ -30,4 +30,4 @@ def duplicates(arr):
 
 # eksi deger([1,2,1,4,-4,0]) degeri girildiginde cortluyor
 # liste uzunlugu girildiginde [1,2,1,4,6,0] 0 olarak dump listesine ekliyor 6 degerini
-print(duplicates([0,2,1,-4,6,0]))
+print(duplicates([0,1,2,1,3]))
