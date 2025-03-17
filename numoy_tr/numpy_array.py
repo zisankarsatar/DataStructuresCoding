@@ -90,7 +90,7 @@ c = np.concatenate([a,a], axis=1)
 [[1 2 3 1 2 3]
  [4 5 6 4 5 6]]
 """
-# axis = 1 sutun
+# axis = 1 satir
 
 #spliting
 x = np.array([1,6,3,4,99,5,4,3])
@@ -122,3 +122,24 @@ x = np.hsplit(m,[2])
        [10, 11],
        [14, 15]])]
        """
+       
+#sorting
+v = np.array([2,1,4,3,5])
+#print(np.sort(v)) 
+v.sort() # koklu degisti
+#print(v)
+
+#iki boyutlu siralama
+m = np.random.normal(20,5,(3,3))
+print(np.sort(m, axis=1)) #stair
+"""
+[[ 8.99770719 13.38972746 29.82296577]
+ [15.47622186 16.99417231 17.8052793 ]
+ [21.35563598 22.90166844 27.80617363]]
+"""
+print(np.sort(m, axis=0)) #stun
+"""
+[[19.10570863 19.41751221 12.40408062]
+ [22.76558711 27.77886295 13.83176311]
+ [24.80316324 30.37630167 25.10304812]]
+"""
