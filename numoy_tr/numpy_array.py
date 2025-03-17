@@ -85,9 +85,40 @@ b = np.concatenate([a,a])
  [4 5 6]]"""
  
 c = np.concatenate([a,a], axis=1)
-print(c)
+#print(c)
 """
 [[1 2 3 1 2 3]
  [4 5 6 4 5 6]]
 """
 # axis = 1 sutun
+
+#spliting
+x = np.array([1,6,3,4,99,5,4,3])
+np.split(x, [3,5])
+
+a,b,c = np.split(x, [3,5])
+#print(a)
+#[1 6 3]
+
+#iki boyutlu ayirma
+m = np.arange(16).reshape(4,4)
+ust, alt = np.vsplit(m,[2])
+#print(ust)
+"""
+[array([[0, 1, 2, 3],
+       [4, 5, 6, 7]]), array([[ 8,  9, 10, 11],
+       [12, 13, 14, 15]])]
+       """
+
+m = np.arange(16).reshape(4,4)
+x = np.hsplit(m,[2])
+#print(x)
+"""
+[array([[ 0,  1],
+       [ 4,  5],
+       [ 8,  9],
+       [12, 13]]), array([[ 2,  3],
+       [ 6,  7],
+       [10, 11],
+       [14, 15]])]
+       """
