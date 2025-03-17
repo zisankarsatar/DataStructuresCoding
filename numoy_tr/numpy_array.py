@@ -41,8 +41,9 @@ a  = np.random.randint(0,10,(3,4))
 # 0dan 10a 3,4luk integer matirs
 
 ##Functions
+#reshape, 
 a = np.arange(1,10).reshape((3,3))
-print(a)
+#print(a)
 """
 vektorel -> matris 
 [[1 2 3]
@@ -52,12 +53,41 @@ vektorel -> matris
 
 a = np.arange(0,10)
 
-print(a.ndim)
-print(a)
+#print(a.ndim)
+#print(a)
 b = a.reshape((2,5))
-print(b)
+#print(b)
 """
 [0 1 2 3 4 5 6 7 8 9]
 [[0 1 2 3 4]
  [5 6 7 8 9]]
 """
+#concatenation(birlestirme)
+x = np.array([1,2,3])
+y = np.array([4,5,6])
+z = np.array([7,8,9])
+
+a = np.concatenate([x,y,z])
+#print(a)
+"""
+[1 2 3 4 5 6 7 8 9]
+"""
+
+#iki boyut
+a = np.array([[1,2,3],
+             [4,5,6]])
+
+b = np.concatenate([a,a])
+#print(b)
+"""[[1 2 3]
+ [4 5 6]
+ [1 2 3]
+ [4 5 6]]"""
+ 
+c = np.concatenate([a,a], axis=1)
+print(c)
+"""
+[[1 2 3 1 2 3]
+ [4 5 6 4 5 6]]
+"""
+# axis = 1 sutun
