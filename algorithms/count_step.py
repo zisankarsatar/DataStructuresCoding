@@ -2,7 +2,8 @@
 #recursive method
 #problem explanation
 """
-Suppose you want climb a staircase of N steps, and on each step you can take either staircase? For example, if you wanted to climb 4 steps, 
+Suppose you want climb a staircase of N steps, and on each step you can take either staircase? 
+For example, if you wanted to climb 4 steps, 
 vou can take the following 
 •⁠  ⁠1) 1, 1, 1, 1
 •⁠  ⁠2) 1, 1, 2
