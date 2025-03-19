@@ -8,6 +8,7 @@ a = np.array([3.14,4,5,2])
 #print(a)
 # cikti -->> [3.14 4.   5.   2.  ] 
 #herhangi bir eleman ondakli ise digerleride ondakliya ceviriliyor. Numpy array in sabit veri tipi ozelliginden dolayi
+
 a = np.array([3.14,4,5,2], dtype='int')
 #print(a)
 #integer a ceriliyor tum liste elemanlari
