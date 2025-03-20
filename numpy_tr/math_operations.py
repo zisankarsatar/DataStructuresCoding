@@ -21,3 +21,14 @@ print(np.sin(360)) #0.9589157234143065
 print(np.cos(360)) #-0.2836910914865273
 print(np.log(30)) #3.4011973816621555
 print(np.log10(23)) #1.3617278360175928
+
+#iki bilinmeyenli deklem
+# 5x0 + x1 = 12
+# x0 + 3x1 = 10
+
+a = np.array([[5,1], [1,3]])
+b = np.array([12,10])
+
+x = np.linalg.solve(a,b)
+
+print(x)
