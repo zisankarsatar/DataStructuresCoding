@@ -1,2 +1,2 @@
 14.02.2024
-Traning Python
+## Traning Python, and Numpy, Pandas
