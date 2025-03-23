@@ -22,6 +22,9 @@ print(seri.ndim)
 #1
 print(seri.values)
 #[ 10  88  23   6 789]
+print(seri.items())
+print(seri.keys)
+print(seri.index)
 print(seri.head(3))
 """
 0    10
