@@ -154,3 +154,10 @@ print(df[(df.var1 > 15)][['var1','var2']])
 5    24    24
 8    22    10
 '''
+
+#join
+df.drop('var4' , axis=1, inplace=True)
+df2 = df + 99
+print(df2)
+
+print(pd.concat([df, df2]))
