@@ -146,7 +146,7 @@ j    18     5   1.800000
 8    22    10
 '''
 #or
-print(df[(df.var1 > 15)][['var1','var2']])
+#print(df[(df.var1 > 15)][['var1','var2']])
 '''
    var1  var2
 0    24    26
@@ -156,8 +156,8 @@ print(df[(df.var1 > 15)][['var1','var2']])
 '''
 
 #join
-df.drop('var4' , axis=1, inplace=True)
-df2 = df + 99
-print(df2)
+arr = np.random.randint(1,99, size=(4,3))
+df1= pd.DataFrame(arr, columns=['var1', 'var2', 'var2'])
+df2 = df1 + 20
 
-print(pd.concat([df, df2]))
+print(pd.concat([df1, df2], ignore_index=True))
