@@ -112,7 +112,7 @@ j    18     5   1.800000
 '''
 
 #loc
-print(df.loc[0:3, "var3"])
+#print(df.loc[0:3, "var3"])
 '''
 0    24
 1    20
@@ -121,9 +121,36 @@ print(df.loc[0:3, "var3"])
 '''
 
 #iloc
-print(df.iloc[0:3]['var3'])
+#print(df.iloc[0:3]['var3'])
 '''
 0    24
 1    20
 2     5
+'''
+
+#condition
+#print(df[(df.var1>10) & (df.var3 < 5)])
+'''
+ var1  var2  var3       var4
+2    15     8     1   1.875000
+8    16     6     3   2.666667
+9    27     1     2  27.000000
+'''
+
+#print(df.loc[(df.var1 > 15), ['var1', 'var2']])
+'''
+   var1  var2
+0    24    26
+4    18     2
+5    24    24
+8    22    10
+'''
+#or
+print(df[(df.var1 > 15)][['var1','var2']])
+'''
+   var1  var2
+0    24    26
+4    18     2
+5    24    24
+8    22    10
 '''
