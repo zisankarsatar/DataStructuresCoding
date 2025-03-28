@@ -9,7 +9,7 @@ df2 = df1 + 20
 df2.columns = ['var1', 'var2', 'deg3'] #column lardan birinin ismi degisir
 
 #her iki dataframe de column isimleri ayni olmayabilir
-print(pd.concat([df1, df2], join='inner')) # inner= join ile ortak olan column lar calisir
+#print(pd.concat([df1, df2], join='inner')) # inner= join ile ortak olan column lar calisir
 '''
    var1  var2
 0    31    91
@@ -23,7 +23,7 @@ print(pd.concat([df1, df2], join='inner')) # inner= join ile ortak olan column l
 '''
 
 #df1 de columnlara gore birlestirme yap
-print(pd.concat([df1, df2.reindex(columns = df1.columns)], ignore_index = True))
+#print(pd.concat([df1, df2.reindex(columns = df1.columns)], ignore_index = True))
 '''
    var1  var2  var3
 0    31    91  75.0
@@ -36,4 +36,40 @@ print(pd.concat([df1, df2.reindex(columns = df1.columns)], ignore_index = True))
 7    75    79   NaN
 '''
 
-dfworkers = pd.DataFrame({'workers' : ['selim','deniz','cihan','derya']})
+dfworkers = pd.DataFrame({'workers' : ['selim','deniz','cihan','derya'],
+                          'group' : ['muhasebe', 'muhendislik', 'muhendislik', 'ik']})
+dfilkgiris = pd.DataFrame({'workers' : ['selim','cihan', 'deniz','derya'],
+                           'ilk_giris' : [2010, 2009, 2014, 2019]})
+
+#print(dfworkers)
+#print(dfilkgiris)
+#print(pd.merge(dfworkers, dfilkgiris))
+'''
+  workers        group
+0   selim     muhasebe
+1   deniz  muhendislik
+2   cihan  muhendislik
+3   derya           ik
+  workers  ilk_giris
+0   selim       2010
+1   cihan       2009
+2   deniz       2014
+3   derya       2019
+  workers        group  ilk_giris
+0   selim     muhasebe       2010
+1   deniz  muhendislik       2014
+2   cihan  muhendislik       2009
+3   derya           ik       2019
+'''
+
+print(pd.merge(dfworkers, dfilkgiris, on='workers'))
+'''
+  workers        group  ilk_giris
+0   selim     muhasebe       2010
+1   deniz  muhendislik       2014
+2   cihan  muhendislik       2009
+3   derya           ik       2019
+'''
+
+#many to one 
+
