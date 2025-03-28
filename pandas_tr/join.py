@@ -62,7 +62,7 @@ dfilkgiris = pd.DataFrame({'workers' : ['selim','cihan', 'deniz','derya'],
 3   derya           ik       2019
 '''
 
-print(pd.merge(dfworkers, dfilkgiris, on='workers'))
+#print(pd.merge(dfworkers, dfilkgiris, on='workers'))
 '''
   workers        group  ilk_giris
 0   selim     muhasebe       2010
@@ -72,4 +72,31 @@ print(pd.merge(dfworkers, dfilkgiris, on='workers'))
 '''
 
 #many to one 
+dfdata = pd.merge(dfworkers, dfilkgiris)
+dfmudur = pd.DataFrame({'group' : ['muhasebe', 'muhendislik', 'ik'],
+                        'mudur' : ['Caner', 'Mustafa', 'Berke']})
+#print(pd.merge(dfdata, dfmudur))
+'''
+  workers        group  ilk_giris    mudur
+0   selim     muhasebe       2010    Caner
+1   deniz  muhendislik       2014  Mustafa
+2   cihan  muhendislik       2009  Mustafa
+3   derya           ik       2019    Berke
+'''
 
+#many to many
+dfyetenek = pd.DataFrame({'group' : ['muhasebe','muhasebe', 'muhendislik', 'muhendislik', 'ik', 'ik'],
+                          'yetenek' : ['matematik','excel','kodlama', 'linux', 'excel', 'yonetim']})
+
+print(pd.merge(dfworkers, dfyetenek))
+'''
+  workers        group    yetenek
+0   selim     muhasebe  matematik
+1   selim     muhasebe      excel
+2   deniz  muhendislik    kodlama
+3   deniz  muhendislik      linux
+4   cihan  muhendislik    kodlama
+5   cihan  muhendislik      linux
+6   derya           ik      excel
+7   derya           ik    yonetim
+'''
