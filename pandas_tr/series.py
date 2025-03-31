@@ -1,7 +1,7 @@
 import pandas as pd
 
 seri = pd.Series([10,88,23,6,789])
-print(seri)
+#print(seri)
 """
 0     10
 1     88
@@ -10,29 +10,29 @@ print(seri)
 4    789
 dtype: int64
 """
-print(type(seri))
+#print(type(seri))
 #pandas.core.series.Series
-print(seri.axes)
+#print(seri.axes)
 #[RangeIndex(start=0, stop=5, step=1)]
-print(seri.dtype)
+#print(seri.dtype)
 #int64
-print(seri.size)
+#print(seri.size)
 #5
-print(seri.ndim)
+#print(seri.ndim)
 #1
-print(seri.values)
+#print(seri.values)
 #[ 10  88  23   6 789]
-print(seri.items())
-print(seri.keys)
-print(seri.index)
-print(seri.head(3))
+#print(seri.items())
+#print(seri.keys)
+#print(seri.index)
+#print(seri.head(3))
 """
 0    10
 1    88
 2    23
 dtype: int64
 """
-print(seri.tail(2))
+#print(seri.tail(2))
 """
 3      6
 4    789
@@ -41,7 +41,7 @@ dtype: int64
 
 #index ismlendirmesi ve slice islemleri
 x = pd.Series([34,23,5,2,76,91], index = ['a',1,'m','d',4,7])
-print(x)
+#print(x)
 """
 a    34
 1    23
@@ -51,7 +51,7 @@ d     2
 7    91
 dtype: int64
 """
-print(x["a":"d"])
+#print(x["a":"d"])
 """
 a    34
 1    23
@@ -61,14 +61,14 @@ dtype: int64
 """
 #sozluk uzerinden liste olusturmak
 sozluk = pd.Series({"reg":10, "log":11, "cart":12})
-print(sozluk)
+#print(sozluk)
 """
 reg     10
 log     11
 cart    12
 dtype: int64
 """
-print(pd.concat([sozluk,seri]))
+#print(pd.concat([sozluk,seri]))
 """
 reg      10
 log      11
