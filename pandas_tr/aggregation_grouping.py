@@ -1,8 +1,9 @@
 #Aggreation & Grouping (Toplulasma ve Gruplama)
 import seaborn as sns
 import pandas as pd
+import numpy as np
 
-dfplanets=sns.load_dataset('planets')
+#dfplanets=sns.load_dataset('planets')
 #print(dfplanets.head())
 """
             method  number  orbital_period   mass  distance  year
@@ -81,7 +82,6 @@ year              5.0  2008.2000    1.923538  2006.00  2007.00  2008.00  2009.00
 #grouping
 dtgroup = pd.DataFrame({'gruplar':['A','B','C','A','B','C'],
                         'veri' : [23,45,64,26,7,98]}, columns=['gruplar','veri'])
-
 #print(dtgroup)
 """
   gruplar  veri
@@ -92,7 +92,6 @@ dtgroup = pd.DataFrame({'gruplar':['A','B','C','A','B','C'],
 4       B     7
 5       C    98
 """
-
 #print(dtgroup.groupby('gruplar').mean())
 """
 gruplar  veri   
@@ -100,6 +99,28 @@ A        24.5
 B        26.0
 C        81.0
 """
+#df=sns.load_dataset('planets').groupby("method")
+#print(df.head())
 
-df=sns.load_dataset('planets').groupby("method")
-print(df.head())
+dtsinavnotlari = pd.DataFrame({'gruplar':['A','B','C','A','B','C'],
+                              'degisken1' : [23,45,64,26,7,98],
+                              'degisken2' : [900,343,87,12,74,342]}, 
+                              columns=['gruplar','degisken1','degisken2'])
+
+#print(dtsinavnotlari.groupby('gruplar').aggregate(["min", np.median, 'max']))
+"""
+                degisken1            degisken2            
+              min median max       min median  max
+gruplar                                           
+A              23   24.5  26        12  456.0  900
+B               7   26.0  45        74  208.5  343
+C              64   81.0  98        87  214.5  342
+"""
+#print(dtsinavnotlari.groupby('gruplar').aggregate({'degisken1':'min', 'degisken2':'max'}))
+"""
+         degisken1  degisken2
+gruplar                      
+A               23        900
+B                7        343
+C               64        342
+"""
