@@ -16,9 +16,6 @@ print(guess_number)
 
 counter = 1
 guess_number_user = int(input(f"pls put your guess ({counter}.): "))
-
-
-
     
 while guess_number != guess_number_user:
     if guess_number > guess_number_user:

@@ -47,8 +47,6 @@ insert(r, Node(67))
 insert(r, Node(11))
 
 #inorder(r)
-
-
 def search(root, key):
     if root is not None:
         if root.value == key:

@@ -26,19 +26,15 @@ class LinkedList:
         msg = msg.rstrip(", ")
         msg += "]"
         return msg
-        
-            
-        
+          
 class Node:
     def __init__(self, val: any) -> None:
         self.val: any = val
         self.next: Node = None
     
-
 l = LinkedList()
 l.append(1)
 l.append(2)
 print(l)
 
 print(l.count)
-
