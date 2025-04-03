@@ -16,8 +16,11 @@ class Jira():
         while not self.task_list.empty():
             item = self.task_list.get()
             temp_list.append(item)
+        
+        for item in temp_list:
+            self.task_list.put(item)
             
-        return temp_list   
+        return temp_list
     
     def get_mandatory_task(self):
         temp_list = []
@@ -27,7 +30,24 @@ class Jira():
         
         priority_1_tasks = [task for priority, task in temp_list if priority == 1]
         return priority_1_tasks   
+    
+    def remove_task(self, priorty, task_detail):
+        temp_list = []
+        task_to_remove = (priorty, task_detail)
+        # Extract tasks and filter out the one to remove
+        
+        while not self.task_list.empty():
+            item = self.task_list.get()
+            if item != task_to_remove:  # Keep only tasks that are NOT the one to remove
+                temp_list.append(item)
+
+        # Rebuild the queue
+        for item in temp_list:
+            self.task_list.put(item)
+            
+        return temp_list
 
 j = Jira()
-#j.create_task()
-print(j.get_mandatory_task())
+j.create_task(3, 'alert added')
+print(j.get_all_tasks())
+print(j.remove_task(3,'alert added'))
