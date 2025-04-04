@@ -1,4 +1,5 @@
 14.02.2024
 ## Traning Python, and Numpy, Pandas
-### Data modeling
+### Data modelling
 ### exercise with python 
+### Stack, Set, Array, Dict
