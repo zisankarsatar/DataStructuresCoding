@@ -12,7 +12,6 @@ vou can take the following
 •⁠  ⁠5) 2,2
 
 """
-
 def countStep(n):
     #base case
     if n == 1:
@@ -22,10 +21,8 @@ def countStep(n):
     #base case
     if n == 2:
         print(2)
-
         return 2
-    
+        
     return countStep(n-1) + countStep(n-2)
-
 
 print(countStep(5))

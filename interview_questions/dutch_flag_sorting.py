@@ -5,7 +5,6 @@ linear time and without any extra space (such as creating an extra array). This 
 flag sorting problem. For example, if the input array is (2,0,0.1,2.1] then your program should output 
 (0.0.1,1,2,2) and the algorithm should run in O(n) time.
 """
-
 def swap(arr, i1, i2):
     temp = arr[i1]
     arr[i1] = arr[i2]
