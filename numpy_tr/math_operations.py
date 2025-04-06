@@ -25,10 +25,8 @@ print(np.log10(23)) #1.3617278360175928
 #iki bilinmeyenli deklem
 # 5x0 + x1 = 12
 # x0 + 3x1 = 10
-
 a = np.array([[5,1], [1,3]])
 b = np.array([12,10])
-
 x = np.linalg.solve(a,b)
 
 print(x)

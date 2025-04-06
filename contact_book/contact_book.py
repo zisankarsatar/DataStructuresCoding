@@ -14,7 +14,6 @@ contact_list = {'zisan' : {'tel_no' : '+31xxxxxxxxx',
                             'mail': 'm@k.com',
                             'addres': 'Normandiya'}}
 
-
 class contactBook():
     def __init__(self):
         #self.contact_list = open("data.txt", "r", encoding="utf-8").read()    
