@@ -25,7 +25,6 @@ class contactBook():
         else:
             return 'There is saved'
         
-            
     def search(self):
         name = input(f"pls put name: ")
         if name in contact_list:
