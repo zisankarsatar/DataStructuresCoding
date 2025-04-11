@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-
 cd /Users/zisan/Desktop/workingPython/simpleProjects
 
 simdi=$(date +%d.%m.%Y)
